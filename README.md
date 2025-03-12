@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Project
 
-## Getting Started
+## Setup Instructions
 
-First, run the development server:
+1. **Clone the repository:**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+    ```bash
+    git clone <repository-url>
+    cd <project-directory>
+    ```
+
+2. **Install dependencies:**
+
+    ```bash
+    npm install
+    ```
+
+    or
+
+    ```bash
+    yarn install
+    ```
+
+3. **Run the development server:**
+
+    ```bash
+    npm run dev
+    ```
+
+    or
+
+    ```bash
+    yarn dev
+    ```
+
+## API Integration Details
+
+Since this project focuses solely on UI/UX and does not include an API, all data handling is currently static or mocked within the components. In case of future API integration, it is recommended to:
+
+-   Use **fetch** for API requests.
+-   Store API responses in state management solutions(React Context).
+
+Example API call using fetch:
+
+```javascript
+import { useEffect, useState } from 'react';
+
+const response = await fetch('/api/form', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(payload),
+});
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Assumptions
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **All fields are required:** Every input field in forms must be filled before submission.
+2. **Service offering page pricing:** Prices are fixed based on the service level and class size tags.
+3. **No API development:** The project was specified to focus on UI/UX, so no backend API was implemented.
+4. **Frontend validation:** All data validation is already handled on the frontend.
+5. **All fields are required:** Every input field in forms must be filled before submission.
+6. **Service offering page pricing:** Prices are fixed based on the service level and class size tags.
+7. **No API development:** The project was specified to focus on UI/UX, so no backend API was implemented.implemented.
