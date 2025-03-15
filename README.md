@@ -5,8 +5,8 @@
 1. **Clone the repository:**
 
     ```bash
-    git clone <repository-url>
-    cd <project-directory>
+    git clone https://github.com/Swa-ne/Assessment.git
+    cd Assessment
     ```
 
 2. **Install dependencies:**
